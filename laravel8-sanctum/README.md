@@ -1,181 +1,232 @@
+
 # Laravel8 sanctum
-## Version: 1.0
 
 
 
-### /register
+## Indices
 
-#### POST
-##### Summary:
+* [Auth](#auth)
 
-Register
+  * [Login](#1-login)
+  * [Logout](#2-logout)
+  * [Register](#3-register)
 
-##### Parameters
+* [Notes](#notes)
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| Authorization | header |  | No | string |
-| name | query |  | Yes | string |
-| email | query |  | Yes | string |
-| password | query |  | Yes | integer |
+  * [Created Note](#1-created-note)
+  * [Delete note](#2-delete-note)
+  * [Fetch All Note](#3-fetch-all-note)
+  * [Fetch Noted By id](#4-fetch-noted-by-id)
+  * [Update Note](#5-update-note)
 
-##### Responses
+* [Ungrouped](#ungrouped)
 
-| Code | Description |
-| ---- | ----------- |
-| 200 |  |
+  * [Profile](#1-profile)
 
-### /login
 
-#### POST
-##### Summary:
+--------
 
-Login
 
-##### Parameters
+## Auth
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| Authorization | header |  | No | string |
-| email | query |  | Yes | string |
-| password | query |  | Yes | integer |
 
-##### Responses
 
-| Code | Description |
-| ---- | ----------- |
-| 200 |  |
+### 1. Login
 
-### /logout
 
-#### POST
-##### Summary:
 
-Logout
+***Endpoint:***
 
-##### Parameters
+```bash
+Method: POST
+Type: 
+URL: http://127.0.0.1:8000/api/login
+```
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| Authorization | header |  | No | string |
 
-##### Responses
 
-| Code | Description |
-| ---- | ----------- |
-| 200 |  |
+***Query params:***
 
-### /notes
+| Key | Value | Description |
+| --- | ------|-------------|
+| email | ariorio@rio.com |  |
+| password | 12345678 |  |
 
-#### POST
-##### Summary:
 
-Created Note
 
-##### Parameters
+### 2. Logout
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| Authorization | header |  | No | string |
-| name | query |  | Yes | string |
-| desc | query |  | Yes | string |
 
-##### Responses
 
-| Code | Description |
-| ---- | ----------- |
-| 200 |  |
+***Endpoint:***
 
-#### GET
-##### Summary:
+```bash
+Method: POST
+Type: 
+URL: http://127.0.0.1:8000/api/logout
+```
+```bash
+Header
+Authorization : Bearer {token}
+```
 
-Fetch All Note
 
-##### Parameters
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| Authorization | header |  | No | string |
+### 3. Register
 
-##### Responses
 
-| Code | Description |
-| ---- | ----------- |
-| 200 |  |
 
-### /notes/1
+***Endpoint:***
 
-#### GET
-##### Summary:
+```bash
+Method: POST
+Type: 
+URL: http://127.0.0.1:8000/api/register
+```
 
-Fetch Noted By id
 
-##### Parameters
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| Authorization | header |  | No | string |
+***Query params:***
 
-##### Responses
+| Key | Value | Description |
+| --- | ------|-------------|
+| name | 'Ario' |  |
+| email | ariorio@rio.com |  |
+| password | 12345678 |  |
 
-| Code | Description |
-| ---- | ----------- |
-| 200 |  |
 
-#### PUT
-##### Summary:
 
-Update Note
+## Notes
 
-##### Parameters
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| Authorization | header |  | No | string |
-| name | query |  | Yes | string |
-| desc | query |  | Yes | string |
 
-##### Responses
+### 1. Created Note
 
-| Code | Description |
-| ---- | ----------- |
-| 200 |  |
 
-#### DELETE
-##### Summary:
 
-Delete note
+***Endpoint:***
 
-##### Parameters
+```bash
+Method: POST
+Type: 
+URL: http://127.0.0.1:8000/api/notes
+```
+```bash
+Header
+Authorization : Bearer {token}
+```
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| Authorization | header |  | No | string |
 
-##### Responses
+***Query params:***
 
-| Code | Description |
-| ---- | ----------- |
-| 200 |  |
+| Key | Value | Description |
+| --- | ------|-------------|
+| name | Catatan 1 |  |
+| desc | Deskripsi catatan |  |
 
-### /profile
 
-#### GET
-##### Summary:
 
-Profile
+### 2. Delete note
 
-##### Parameters
 
-| Name | Located in | Description | Required | Schema |
-| ---- | ---------- | ----------- | -------- | ---- |
-| Authorization | header |  | No | string |
 
-##### Responses
+***Endpoint:***
 
-| Code | Description |
-| ---- | ----------- |
-| 200 |  |
+```bash
+Method: DELETE
+Type: 
+URL: http://127.0.0.1:8000/api/notes/1
+```
+```bash
+Header
+Authorization : Bearer {token}
+```
+
+
+### 3. Fetch All Note
+
+
+
+***Endpoint:***
+
+```bash
+Method: GET
+Type: 
+URL: http://127.0.0.1:8000/api/notes
+```
+```bash
+Header
+Authorization : Bearer {token}
+```
+
+
+### 4. Fetch Noted By id
+
+
+
+***Endpoint:***
+
+```bash
+Method: GET
+Type: 
+URL: http://127.0.0.1:8000/api/notes/1
+```
+```bash
+Header
+Authorization : Bearer {token}
+```
+
+
+### 5. Update Note
+
+
+
+***Endpoint:***
+
+```bash
+Method: PUT
+Type: 
+URL: http://127.0.0.1:8000/api/notes/1
+```
+
+```bash
+Header
+Authorization : Bearer {token}
+```
+
+***Query params:***
+
+| Key | Value | Description |
+| --- | ------|-------------|
+| name | name |  |
+| desc | deskripsi |  |
+
+
+
+## Ungrouped
+
+
+
+### 1. Profile
+
+
+
+***Endpoint:***
+
+```bash
+Method: GET
+Type: 
+URL: http://127.0.0.1:8000/api/profile
+```
+
+
+
+---
+[Back to top](#laravel8-sanctum)
+> Made with &#9829; by [thedevsaddam](https://github.com/thedevsaddam) | Generated at: 2021-11-03 11:06:44 by [docgen](https://github.com/thedevsaddam/docgen)
+
+
+
 
 
 
