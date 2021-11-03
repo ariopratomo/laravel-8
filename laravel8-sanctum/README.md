@@ -1,3 +1,218 @@
+
+# Laravel8 sanctum
+
+
+
+## Indices
+
+* [Auth](#auth)
+
+  * [Login](#1-login)
+  * [Logout](#2-logout)
+  * [Register](#3-register)
+
+* [Notes](#notes)
+
+  * [Created Note](#1-created-note)
+  * [Delete note](#2-delete-note)
+  * [Fetch All Note](#3-fetch-all-note)
+  * [Fetch Noted By id](#4-fetch-noted-by-id)
+  * [Update Note](#5-update-note)
+
+* [Ungrouped](#ungrouped)
+
+  * [Profile](#1-profile)
+
+
+--------
+
+
+## Auth
+
+
+
+### 1. Login
+
+
+
+***Endpoint:***
+
+```bash
+Method: POST
+Type: 
+URL: http://127.0.0.1:8000/api/login
+```
+
+
+
+***Query params:***
+
+| Key | Value | Description |
+| --- | ------|-------------|
+| email | ariorio@rio.com |  |
+| password | 12345678 |  |
+
+
+
+### 2. Logout
+
+
+
+***Endpoint:***
+
+```bash
+Method: POST
+Type: 
+URL: http://127.0.0.1:8000/api/logout
+```
+
+
+
+### 3. Register
+
+
+
+***Endpoint:***
+
+```bash
+Method: POST
+Type: 
+URL: http://127.0.0.1:8000/api/register
+```
+
+
+
+***Query params:***
+
+| Key | Value | Description |
+| --- | ------|-------------|
+| name | 'Ario' |  |
+| email | ariorio@rio.com |  |
+| password | 12345678 |  |
+
+
+
+## Notes
+
+
+
+### 1. Created Note
+
+
+
+***Endpoint:***
+
+```bash
+Method: POST
+Type: 
+URL: http://127.0.0.1:8000/api/notes
+```
+
+
+
+***Query params:***
+
+| Key | Value | Description |
+| --- | ------|-------------|
+| name | Catatan 1 |  |
+| desc | Deskripsi catatan |  |
+
+
+
+### 2. Delete note
+
+
+
+***Endpoint:***
+
+```bash
+Method: DELETE
+Type: 
+URL: http://127.0.0.1:8000/api/notes/1
+```
+
+
+
+### 3. Fetch All Note
+
+
+
+***Endpoint:***
+
+```bash
+Method: GET
+Type: 
+URL: http://127.0.0.1:8000/api/notes
+```
+
+
+
+### 4. Fetch Noted By id
+
+
+
+***Endpoint:***
+
+```bash
+Method: GET
+Type: 
+URL: http://127.0.0.1:8000/api/notes/1
+```
+
+
+
+### 5. Update Note
+
+
+
+***Endpoint:***
+
+```bash
+Method: PUT
+Type: 
+URL: http://127.0.0.1:8000/api/notes/1
+```
+
+
+
+***Query params:***
+
+| Key | Value | Description |
+| --- | ------|-------------|
+| name | name |  |
+| desc | deskripsi |  |
+
+
+
+## Ungrouped
+
+
+
+### 1. Profile
+
+
+
+***Endpoint:***
+
+```bash
+Method: GET
+Type: 
+URL: http://127.0.0.1:8000/api/profile
+```
+
+
+
+---
+[Back to top](#laravel8-sanctum)
+> Made with &#9829; by [thedevsaddam](https://github.com/thedevsaddam) | Generated at: 2021-11-03 11:06:44 by [docgen](https://github.com/thedevsaddam/docgen)
+
+
+
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
