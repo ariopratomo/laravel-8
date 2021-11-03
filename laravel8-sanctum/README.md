@@ -65,6 +65,10 @@ Method: POST
 Type: 
 URL: http://127.0.0.1:8000/api/logout
 ```
+```bash
+Header
+Authorization : Bearer {token}
+```
 
 
 
@@ -107,7 +111,10 @@ Method: POST
 Type: 
 URL: http://127.0.0.1:8000/api/notes
 ```
-
+```bash
+Header
+Authorization : Bearer {token}
+```
 
 
 ***Query params:***
@@ -130,7 +137,10 @@ Method: DELETE
 Type: 
 URL: http://127.0.0.1:8000/api/notes/1
 ```
-
+```bash
+Header
+Authorization : Bearer {token}
+```
 
 
 ### 3. Fetch All Note
@@ -144,7 +154,10 @@ Method: GET
 Type: 
 URL: http://127.0.0.1:8000/api/notes
 ```
-
+```bash
+Header
+Authorization : Bearer {token}
+```
 
 
 ### 4. Fetch Noted By id
@@ -158,7 +171,10 @@ Method: GET
 Type: 
 URL: http://127.0.0.1:8000/api/notes/1
 ```
-
+```bash
+Header
+Authorization : Bearer {token}
+```
 
 
 ### 5. Update Note
@@ -173,7 +189,10 @@ Type:
 URL: http://127.0.0.1:8000/api/notes/1
 ```
 
-
+```bash
+Header
+Authorization : Bearer {token}
+```
 
 ***Query params:***
 
@@ -200,7 +219,10 @@ Type:
 URL: http://127.0.0.1:8000/api/profile
 ```
 
-
+```bash
+Header
+Authorization : Bearer {token}
+```
 
 ---
 [Back to top](#laravel8-sanctum)
